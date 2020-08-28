@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sum An Array</title>
+</head>
+<body>
+  <script>
+
+
+  function sumArray(numbersArray) {                   //defining a function with a parameter
+    var sum = 0;                                      //starting sum is zero
+    for (var i = 0; i < numbersArray.length; i++) {   //setting index to zero, checking length of numbersArray is less than index, and incrementing index by 1
+      sum += numbersArray[i];                         //taking the sum and adding it to the index of each number array
+    }
+    return sum;                                       //NEED THIS LINE TO RETURN ANSWER
+  }
+
+    console.log(sumArray([10, 5, 3, 7, 2]));
+    console.log(sumArray([1, 2, 3, 4, 5]));
+    console.log(sumArray([5, 3, 7, 4]));
+
+
+  </script>
+</body>
+</html>

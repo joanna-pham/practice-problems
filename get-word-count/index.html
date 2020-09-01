@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Word Count</title>
+</head>
+<body>
+
+  <script>
+    function getWordCount(sentence) {
+      return sentence.split(' ').length; //end of every space counts as 1 --> syntax: (separator, limit)
+    }
+
+    console.log(getWordCount("This is a sample sentence"));
+    console.log(getWordCount("Han shot first"));
+    console.log(getWordCount("I will not fear, fear is the mind killer"));
+  </script>
+
+</body>
+</html>

@@ -13,12 +13,13 @@
 
 
     function removeNullValues(array) {
+      var result = [];
       for (var i = 0; i < array.length; i++) {
-        if (array[i] == null) {
-          array.splice(i, 1)
+        if(array[i] !== null) {
+          result.push(array[i])
         }
       }
-      return array
+      return result;
     }
 
     console.log(removeNullValues([3, 5, null, null, 87, "hello", "goodbye"])); // -> [3,5,87,"hello", "goodbye"]

@@ -11,15 +11,15 @@
 
   function oddUpEvenDown(array) {
     var results = []; // put answers in a new array
-    var holdMyNum = "";
+    var holdMyNum = ""; //placeholder
     for (var i = 0; i < array.length; i++) {
       holdMyNum = array[i];
-      if (holdMyNum % 2 === 0) {
+      if (holdMyNum % 2 === 0) { //if placeholder is an even number
         holdMyNum--
       } else {
         holdMyNum++
       }
-      results.push(holdMyNum);
+      results.push(holdMyNum); //push the placeholder into new array
     }
     return results
   }

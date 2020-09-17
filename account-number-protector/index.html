@@ -16,11 +16,9 @@
     //return the new values from empty storage
 
     function accountNumberProtector(cardNumberString){
-      var results = [];
-      for (var i = 0; i < cardNumberString.length; i++) {
-        var digits = cardNumberString.slice(12);
-        results = "**" + digits;
-      }
+      var results = "";
+      var digits = cardNumberString.slice(12);
+      results = "**" + digits;
       return results
     }
 

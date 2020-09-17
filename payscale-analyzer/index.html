@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payscale Analyzer</title>
+</head>
+
+<body>
+
+  <script>
+
+    //defining a function named payscaleAnalyzer with one parameter name payList
+    //need to find an initial number to compare if it's higher or lower
+    //----set first value in array as max number
+    //----set first value in array as min number
+    //need to have 2 different loops to find max and min number
+    //highest number
+    //----while looping through the array, if the number index is larger than the initial value, set it as the new max number
+    //lowest number
+    //----while looping through the array, if the number index is smaller than the initial value, set it as the new min number
+    //return the difference of values for max number and min number
+
+    function payscaleAnalyzer(payList){
+      var maxNum = payList[0];
+      var minNum = payList[0];
+
+      for (var i = 0; i < payList.length; i++) {
+        if (maxNum < payList[i]) {
+          maxNum = payList[i];
+        }
+      }
+
+      for (var i = 0; i < payList.length; i++) {
+        if (payList[i] < minNum) {
+          minNum = payList[i];
+        }
+      }
+      return maxNum - minNum
+    }
+
+    console.log(payscaleAnalyzer([28, 34, 21, 39]))   // -> 18
+    console.log(payscaleAnalyzer([18, 22, 19, 26]))   // -> 8
+    console.log(payscaleAnalyzer([41.50, 27.25, 32.50, 29.60]))  // -> 14.25
+
+
+  </script>
+
+</body>
+
+</html>

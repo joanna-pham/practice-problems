@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day Finder</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    //define a function with one parameter
+    //get value from the day (will be returned as a number)
+    //create a variable that contains the 7 days of the week
+
+
+    function dayFinder(stringDate) {
+
+      var days = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+      ]
+
+      var date = new Date(stringDate)
+      var dayNum = date.getDay();
+      console.log(dayNum)
+    }
+
+    console.log(dayFinder("05/22/1946")) // -> "Wednesday"
+    console.log(dayFinder("01/20/2001")) // -> "Saturday"
+    console.log(dayFinder("03/15/1988")) // -> "Tuesday"
+
+  </script>
+
+</body>
+
+</html>

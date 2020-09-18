@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zip Code Validator</title>
+</head>
+
+<body>
+
+  <script>
+
+    function zipCodeValidator(zipToValidate) {
+      return !isNaN(zipToValidate) && zipToValidate.length === 5
+    }
+    //!isNan method determines if the value is NaN
+
+
+    //-----my code below
+    // function zipCodeValidator(zipToValidate) {
+    //   for (var i = 0; i < zipToValidate.length; i++) { //looping through array
+    //     if (zipToValidate.length === 5) { //checking if length of array is 5
+    //       return true;
+    //     } else if (parseInt(zipToValidate) && typeof zipToValidate === 'number') { //converting strings to number and checking data type for number
+    //       return true;
+    //     }
+    //   }
+    // }
+
+    // function zipCodeValidator(zipToValidate) {
+    //   for (var i = 0; i < zipToValidate.length; i++) {
+    //     return (zipToValidate.length === 5) && (typeof zipToValidate === 'number')
+    //   }
+    // }
+
+    console.log("21594 = ", zipCodeValidator("21594")) // -> true
+    console.log("3Eds32 = ", zipCodeValidator("3Eds32")) // -> false
+    console.log("9123465 = ", zipCodeValidator("9123465")) // -> false
+
+  </script>
+
+</body>
+
+</html>

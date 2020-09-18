@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert Minutes to Seconds</title>
+</head>
+<body>
+
+  <script>
+
+    //create variable to split time into minutes and seconds
+    //create variable using info from split time for minutes
+    //create variable using info from split time for seconds
+    //get minutes and convert to seconds, store in variable for minutes
+    //get the number for seconds, store in variable for seconds
+    //add the two numbers together
+
+    function convertMinutesToSeconds(timeToConvert){
+      var time = timeToConvert.split(":") //will return an array of strings.. not numbers!
+      var min = parseInt(time[0] * 60); //parseInt = converts string to numbers
+      var sec = parseInt(time[1]);
+      return min + sec
+    }
+
+  console.log("15:34 =", convertMinutesToSeconds("15:34")) // -> 934
+  console.log("02:45 =", convertMinutesToSeconds("02:45")) // -> 165
+  console.log("08:21 =", convertMinutesToSeconds("08:21")) // -> 501
+
+  </script>
+
+</body>
+</html>

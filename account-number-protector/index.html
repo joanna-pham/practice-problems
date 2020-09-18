@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Number Protector</title>
+</head>
+<body>
+
+  <script>
+
+    //create an empty storage to hold the new results
+    //loop through the given input of 16 numbers
+    //find the index that will start at the last 4 digits and assign to a variable
+    //add 2 asterisks with the new variable and assign to the empty storage
+    //return the new values from empty storage
+
+    function accountNumberProtector(cardNumberString){
+      var results = "";
+      var digits = cardNumberString.slice(12);
+      results = "**" + digits;
+      return results
+    }
+
+
+  console.log('Your account number is:', accountNumberProtector("5543223485638832")) // -> "**8832"
+  console.log('Your account number is:', accountNumberProtector("8934235477210943")) // -> "**0943"
+  console.log('Your account number is:', accountNumberProtector("7513635499320192")) // -> "**0192"
+
+  </script>
+
+</body>
+</html>

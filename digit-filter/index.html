@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digit Filter</title>
+</head>
+
+<body>
+
+  <script>
+
+    function digitFilter(numbersArray, numberFilter) {
+      var results = [];
+      for (var i = 0; i < numbersArray.length; i++) {
+        if (numbersArray[i].toString().length === numberFilter) {
+          results.push(numbersArray[i])
+        }
+      }
+      return results
+    }
+
+
+    // ------- my code below ------------------
+    //numbersArray - an array of numbers
+    //numberFilter - number value
+
+    // create an empty storage to hold new set of numbers in an array
+    // go through each number in array to find numberFilter
+    // --- set a condition to look for specific numberFilter
+    // --- if one of the numbers in array equals the numberFilter,
+    // --- take that number and put it in empty storage
+    // return empty storage
+
+    // function digitFilter(numbersArray, numberFilter) {
+    //   var results = [];
+    //   for (var i = 0; i < numbersArray.length; i++) {
+    //     if (numbersArray[i] === numberFilter) {
+    //     }
+    //   }
+    // }
+
+    console.log(digitFilter([23, 312, 24, 243, 43], 3)) // -> [312, 243]
+    console.log(digitFilter([23, 315, 231, 54, 72], 2)) // -> [23, 54, 72]
+    console.log(digitFilter([1, 4323, 23, 4565, 3, 4], 1)) // -> [1, 3, 4]
+
+
+  </script>
+
+</body>
+
+</html>

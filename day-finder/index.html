@@ -31,7 +31,7 @@
 
       var date = new Date(stringDate)
       var dayNum = date.getDay();
-      console.log(dayNum)
+      return days[dayNum] //days array to get specific index with value of dayNum variable
     }
 
     console.log(dayFinder("05/22/1946")) // -> "Wednesday"

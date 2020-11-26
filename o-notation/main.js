@@ -12,7 +12,7 @@
 // After finding the Big-O Notation for every line, find the statement(s) with
 // the largest Big-O Notation. That is the Big-O Notation for the function.
 
-// Big-O for getUnique1(n): O(n)
+// Big-O for getUnique1(n): O(n^2)
 function getUnique1(values) {
   const uniqueValues = [];  // 1. O(1) * 2. O(1) = 3. O(1)
 
@@ -33,10 +33,14 @@ function getUnique1(values) {
         unique = false;  // 1. O(1) * 2. O(n^2) = 3. O(n^2)
       }
     }
+
     if (unique) {  // 1. O(1) * 2. O(n) = 3. O(n)
-      uniqueValues.push(value);  // 1. O(1) * 2. O(1) = 3. O(1)
+      uniqueValues.push(value);  // 1. O(log(n)) * 2. O(n) = 3. O(n * log(n))
     }
   }
 
   return uniqueValues;  // 1. O(1) * 2. O(1) = 3. O(1)
 }
+
+// n^2 = n * n
+//log(n) = logarithm

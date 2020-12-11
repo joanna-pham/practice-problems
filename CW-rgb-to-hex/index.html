@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <p>The rgb function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal
+    representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must
+    be
+    rounded to the closest valid value.</p>
+
+  <p>
+    Note: Your answer should always be 6 characters long, the shorthand with 3 will not work here.
+  </p>
+
+  <p>
+    The following are examples of expected output values:
+  </p>
+
+  <p>
+    rgb(255, 255, 255) // returns FFFFFF
+  </p>
+
+  <p>
+    rgb(255, 255, 300) // returns FFFFFF
+  </p>
+
+  <p>
+    rgb(0,0,0) // returns 000000
+  </p>
+
+  <p>
+    rgb(148, 0, 211) // returns 9400D3
+
+  </p>
+
+
+  <script>
+    function convert(dec) {
+      let decNum = dec;
+      if (dec < 0) {
+        decNum = 0;
+      } else if (dec > 255) {
+        decNum = 255;
+      }
+
+      let decString = decNum.toString(16);
+      if (decString.length === 1) {
+        decString = "0" + decString;
+      }
+
+      return decString.toUpperCase();
+    }
+
+    function rgb(r, g, b) {
+      return convert(r) + convert(g) + convert(b);
+    }
+
+    //METHOD 1
+    // function rgb(r, g, b) {
+    //     return toHex(r) + toHex(g) + toHex(b);
+    //   }
+
+    //   function toHex(d) {
+    //     if (d < 0) { return "00"; }
+    //     if (d > 255) { return "FF"; }
+    //     return ("0" + (Number(d).toString(16))).slice(-2).toUpperCase()
+    //   }
+
+    //METHOD 2
+    // function rgb(r, g, b) {
+    //     return [r, g, b].map(function (x) {
+    //       return ('0' + Math.max(0, Math.min(255, x)).toString(16)).slice(-2);
+    //     }).join('').toUpperCase();
+    //   }
+
+
+    //METHOD 3
+    // let rgb = (r, g, b) => [r, g, b].map((item) => item >= 255 ? 'FF' : item <= 0 ? '00' : item.toString(16).toUpperCase()).join('')
+
+  </script>
+
+</body>
+
+</html>
